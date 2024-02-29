@@ -1,0 +1,54 @@
+body {
+    background-color: red;
+}
+
+@media print {
+    body {
+        background-color: gray;
+    }
+}
+
+@media (orientation: portrait) { /* orientation: fektetett, állított */
+    body {
+        background-color: green;
+    }
+}
+
+header section {
+    display: none;
+    background-color: aqua;
+}
+
+section {
+    background-color: bisque;
+}
+
+main {
+    display: flex;
+
+    background-color: brown;
+}
+
+@media (width > 1200px) {
+    header section {
+        display: block;
+    }
+    
+    section {
+        display: none;
+    }
+}
+
+/*
+@media (max-width: 1200px) and (min-width: 800px) {
+    main {
+        background-color: chartreuse;
+    }
+}
+*/
+
+@media screen and (1200px > width > 800px) {
+    main {
+        background-color: chartreuse;
+    }
+}

@@ -1,0 +1,83 @@
+* {
+    border: black 1px solid;
+}
+
+body {
+    background-color: aqua;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 200px 400px 50px;
+
+        grid-template-areas: 
+        "logo ht"
+        "container container"
+        "footer footer";
+    }
+
+    .logo {
+        background-color: white;
+        grid-area: logo;
+    }
+
+    header {
+        background-color: white;
+        grid-area: ht;
+    }
+
+    header .sub-1200 {
+        background-color: white;
+        
+    }
+
+    .sub-800 {
+        background-color: white;
+        display: none;
+    }
+
+    .container {
+        background-color: greenyellow;
+        grid-area: container;
+        
+        display: inline-flex;
+
+        align-items: space-evenly;
+        justify-content: start;
+
+        flex-flow: row wrap;
+
+        gap: 40px 20px;
+    }
+
+    .card {
+        background-color: azure;
+        display: block;
+
+        flex: 0 5 30%;
+
+        border: 1px solid black;
+        height: 100px;
+        width: 200px;
+    }
+
+    footer {
+        background-color: white;
+        grid-area: footer;
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: goldenrod;
+    }
+}
